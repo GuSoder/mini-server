@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
+import logging
 
 app = Flask(__name__)
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 # Array of networked objects
 networked_objects = [
